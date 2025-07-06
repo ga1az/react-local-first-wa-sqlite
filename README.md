@@ -20,3 +20,5 @@ This project showcases a simple user management interface that stores data local
 - ✅ Type-safe database queries with Kysely
 - ✅ Real-time UI updates with PowerSync's reactive queries
 - ✅ Offline-first architecture
+
+![png](./public/view.png)

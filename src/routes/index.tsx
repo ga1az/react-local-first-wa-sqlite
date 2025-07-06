@@ -554,8 +554,7 @@ function App() {
 
 				{/* Footer */}
 				<div className="mt-4 text-xs text-green-600 text-center">
-					Use J/K or Arrow Keys to navigate | Click to select | Optimized with
-					prefetching & caching
+					Use J/K or Arrow Keys to navigate | Click to select
 				</div>
 			</div>
 		</div>
