@@ -1,8 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useQuery } from "@powersync/tanstack-react-query";
 import { db } from "@/lib/db";
-import { useState, useEffect, useRef } from "react";
 import { usePowerSync } from "@powersync/react";
+import { useQuery } from "@powersync/tanstack-react-query";
+import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 
 export const Route = createFileRoute("/")({
 	component: App,
@@ -43,6 +43,8 @@ function App() {
 			.selectAll(),
 		enabled: !!selectedPost,
 		staleTime: 5 * 60 * 1000, // 5 minutes
+		// Always fetch data from server
+		networkMode: "always",
 	});
 
 	// Prefetch previous post data
@@ -54,6 +56,8 @@ function App() {
 			.selectAll(),
 		enabled: !!prevPost,
 		staleTime: 5 * 60 * 1000,
+		// Always fetch data from server
+		networkMode: "always",
 	});
 
 	// Prefetch next post data
@@ -65,6 +69,8 @@ function App() {
 			.selectAll(),
 		enabled: !!nextPost,
 		staleTime: 5 * 60 * 1000,
+		// Always fetch data from server
+		networkMode: "always",
 	});
 
 	// Keyboard navigation
